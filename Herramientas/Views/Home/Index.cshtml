@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Bienvenido</h1>
+            </hgroup>
+            <p>
+                Utilice este sitio como apoyo interno a su trabajo.
+            </p>
+            <p>
+                Dentro de los objetivos de este sitio, se encuentra la posibilidad de innovar con tecnología que esten a nuestro alcance, siempre y cuando la innovación apunte a solucionar un problema detectado, ya sea interno o externo.
+            </p>
+        </div>
+    </section>
+}
+<h3>Actualmente este sitio dispone de:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Cliente API - Servicio Geo Cgr</h5>
+        Servicio utilizado por la Contraloría General de la Republica (CGR) para georeferenciar licitaciones del tipo Obras Públicas.
+        @Html.ActionLink("Entrar…", "Index", "ClienteApi")
+    </li>
+
+    <li class="two">
+        <h5>Soporte en línea a usuarios</h5>
+        Con el objetivo de poder comunicar al usuario cuando por algún motivo inesperado presente un error navegando en www.mercadopublico.cl.
+        @Html.ActionLink("Entrar…", "SignalR", "SignalR")
+    </li>
+
+    <li class="three">
+        <h5>Visibilidad de Proyectos</h5>
+        Listado de proyectos de la División Tecnología y Negocios.
+        @Html.ActionLink("Entrar…", "Proyectos", "Proyectos")
+    </li>
+
+    <li class="four">
+        <h5>¿Necesita que su idea este aquí?</h5>
+        Quiere que su idea o herramienta de apoyo a su labor diaria este disponible en este sitio, ¡hagalo saber! comuniquese con el Área de Desarrollo de la División de Tecnología.
+    </li>
+</ol>

@@ -1,0 +1,55 @@
+﻿.projects .project-label {
+    font-weight: 600
+}
+
+.projects .hpanel .panel-body {
+    border-bottom: none
+}
+
+.projects .hpanel:last-child .panel-body {
+    border-bottom: 1px solid #e4e5e7
+}
+
+.projects .hpanel:last-child .panel-body {
+    border-bottom: 1px solid #e4e5e7
+}
+
+.projects .hpanel h4 a {
+    color: #6a6c6f
+}
+
+.projects .project-people img {
+    width: 28px;
+    height: 28px;
+    margin-left: 2px;
+    margin-bottom: 4px
+}
+
+.projects .project-info {
+    text-align: right
+}
+
+.panel-group .proyecto .lazul {
+    border-top: 2px solid #3498db;
+}
+
+.proyectos .lverde {
+    border-top: 2px solid #62cb31;
+}
+
+.panel-heading {
+  /*padding: 10px 40px;*/
+  /*border-bottom: 1px solid transparent;*/
+  height: 50px;
+ /*border-top-right-radius: 3px;
+  border-top-left-radius: 3px;*/
+}
+
+.progress-small, .progress-small .progress-bar {
+    height: 10px
+}
+
+.full .progress-bar-info {
+    background-color: #3498db;
+    border-right: 4px solid #258cd1
+}

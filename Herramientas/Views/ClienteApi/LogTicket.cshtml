@@ -1,0 +1,27 @@
+﻿@model Herramientas.Models.DCCPProcurementEntities
+
+@{
+    ViewBag.Title = "LogTicket";
+}
+
+<h2>LogTicket</h2>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <table>
+            <tr>
+                @{
+                    List<Herramientas.Models.TicketLog> listaTiecketLog = ViewBag.TicketLog;
+
+                    foreach (var ticketLog in listaTiecketLog)
+                    {                        
+                        <td>
+                            @ticketLog.Texto
+                        </td>
+                    }
+                    @:
+                </tr>
+                }
+            </table>
+        </div>
+    </div>

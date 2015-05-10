@@ -1,0 +1,53 @@
+﻿<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    {{#.}}
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading_{{Servidor}}">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse_{{Servidor}}" aria-expanded="true" aria-controls="collapse_{{Servidor}}">
+                    {{Servidor}} <span style="float: right;">Estado: {{Estado}}</span>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse_{{Servidor}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_{{Servidor}}">
+            <div class="panel-body" style="word-wrap: break-word;">
+                Url: {{Url}}
+                <h2>
+                    Respuesta:
+                </h2>
+                <table>
+                    <tr>
+                        <td>
+                            Licitacion: {{Licitacion}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Llave: {{Llave}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Respuesta: {{Respuesta}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mensaje: {{Mensaje}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            StatusGeoCgr: {{StatusGeoCgr}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            FechaRespuesta: {{FechaRespuesta}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    {{/.}}
+</div>

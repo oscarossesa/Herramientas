@@ -1,0 +1,66 @@
+﻿@model Herramientas.Models.PartialLogModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*Scripts se agregan solo en la pagina a utilizar*@
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/componentes/cliente_api.js")"></script>
+    <script src="@Url.Content("~/Scripts/handlebars-v2.0.0.js")"></script>
+}
+
+<p>
+    <div>
+        @Html.Partial("PartialLogTicket", Model)
+    </div>
+</p>
+
+<ol class="round">
+    <li class="one">
+        <h2>Servicio Geo CGR.</h2><br />
+        <div class="contenedor"></div>
+    </li>
+    <li class="two">
+        <h2>Documentación</h2><br />
+        Servicio utilizado por la Contraloría General de la Republica (CGR) para georeferenciar licitaciones de tipo Obras Públicas.
+        <br />
+        <br />
+        <p>Versiones:</p>
+        <table>
+            <tr>
+                <td>Versión</td>
+                <td>Fecha</td>
+                <td>Cambio</td>
+            </tr>
+            <tr>
+                <td>v0.0.1</td>
+                <td>05-03-2015</td>
+                <td>Se agrega posibilidad de probar el Servicio de Geo CGR.</td>
+            </tr>
+            <tr>
+                <td>v0.0.2</td>
+                <td>30-03-2015</td>
+                <td>Se agregar Acordion para agrupar los servidores.</td>
+            </tr>
+        </table>
+
+        <br />
+
+        <p>Futuras Versiones:</p>
+
+        <ol>
+            <li>
+                Agregar switch para activar las llamadas a los servicios.
+            </li>
+            <li>
+                Agregar indicador de estado del servicio. Verde cuando está funcionando correctamente, Rojo cuando presenta inconvenientes.
+            </li>
+            <li>
+                Agregar tiempo de respuesta del servivio.
+            </li>
+        </ol>
+    </li>
+</ol>

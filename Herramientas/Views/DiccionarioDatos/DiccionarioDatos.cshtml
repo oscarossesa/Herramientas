@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Herramientas.Models.ObtenerTablas_Result>
+
+@{
+    ViewBag.Title = "DiccionarioDatos";
+}
+
+<h2>DiccionarioDatos</h2>
+
+
+
+@foreach(var item in Model){
+    @item.table
+    
+}

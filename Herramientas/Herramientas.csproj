@@ -1,0 +1,1867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E13782E-05CC-4825-BFCF-78EF5A4EA030}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Herramientas</RootNamespace>
+    <AssemblyName>Herramientas</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DELETE_ME">
+      <HintPath>..\packages\CodeContracts.Unofficial.1.0.0.2\lib\net40-client\DELETE_ME.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ChatHub.cs" />
+    <Compile Include="Controllers\ClienteApiController.cs" />
+    <Compile Include="Controllers\DiccionarioDatosController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProyectosController.cs" />
+    <Compile Include="Controllers\SignalRController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Autorizacion.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_ADQ_IN_TRACKING_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_ADQ_PUBLISHED_WITH_BID_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_CLOSED_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_CLOSED_TODAY_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_PO_FOR_ACCEPTED_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_PUBLISHED_CATEGORY_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_SAVED_BUT_NOT_ENTERED_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_WHERE_I_CAN_ASK_QUESTIONS_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_WITH_BID_ADJ_OTHER_SUPPLIER_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_WITH_BID_ADJ_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BID_LIST_WITH_INVITATION_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Excel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Nombre_Region_Organismo_Excel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Nombre_Region_Organismo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Organismo_Excel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Organismo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Region_Excel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Region_Organismo_Excel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Region_Organismo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Region_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusquedaLicitacionesSeguimiento_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampañaActaEvaluacionJulio2011_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampañaPregSinRespuestasDurante_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampañaPregSinRespuestasPreventiva_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampañaTiemposDePublicacionJulio2011_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cargaDatosDE_Ofertas_MPCRM_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cargaDatosLI_Ofertas_MPCRM_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cargaDatosObservatorioCRM_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpEnvioMailCompradores_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpEnvioMailProveedores_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_Licitacion_Adjudicada_Historico_Mes_Semana_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_Licitacion_Adjudicada_Historico_Mes_UMedida_Cantidad_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_Licitacion_Adjudicada_Historico_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_Licitacion_Cerrada_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_Licitacion_Of_Recibida_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_Licitacion_Opor_Negocio_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_Licitacion_Publicada_Historica_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_Licitacion_Publicada_LP_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_OC_Enviadas_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpExcel_Opor_Negocio_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpInformeMonitoreoComprasSustentables_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpInformeMonitoreoFechasMinimas_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpInformeMonitoreoLCGuardadasDiario_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpInformeMonitoreoLCPublicadasDiario_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cpInformeMonitoreoLCSinActaEval_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstructuraTabla.cs" />
+    <Compile Include="Models\ExisteSolicitudModificacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FSObtenerCompradores_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FSObtenerDatosLicitacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FSObtenerNombreRubro_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FSObtenerProveedores_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\f_ParaBorrar_prcSpcSearchprcRFBHeaderSearchAdquisitionByExternalCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\f_Temp_prcSpcGetprcPOHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\f_temp_prcSpcReadprcPOShipmentType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\f_temp_prcSpcSearchprcRFBHeaderByCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\f_TEMP_prcSpcSearchprcRFBHeaderNew_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\f_TEMP_prcSpcSearchprcRFBHeaderOld_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\gblSpcGetSomeStatus_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GenerarTicketAPI_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllDocsAgregados_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllDocsOfertarConAdjuntos_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllDocsOfertar_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetAllDocsSolicitados_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetbuyerSelectListProvided_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetbuyerSelectList_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetCriteriaSelectListII_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetCriteriaSelectList_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\getUserProcessPending_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IG_ExtraerIndicadorPorTipo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IG_ExtraerResultadoIndicadorPorTipo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeerOferta_Item_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeerOferta_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeerPlazosOptativoTomaRazonContratacionServicio_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LicitacionesPorEntTodas_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LicitacionesPorEntTop3_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ListaCursosCapacitacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LlenaCanastaProducto_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LlenaInfoLicitaciones_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MIGRACION_PMG_SGC_ObtenerEncabezadoLicitacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MIGRACION_PMG_SGC_ObtenerEncabezadoOC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAPI.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAPI.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAPI.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAPI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAPI.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MPM_ObtenerUltimasLicitacionesPublicadas_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerAlertasPorTipo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerAlertas_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerAutorizacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerByTicket_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerCrossTablaPrcBIDQuoteConPrcRFBHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerDetalleReportePC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerInformacionGeoCgr_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerInformacionOC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerLicitacionesObrasAdjudicadasPendientes_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerLicitacionesSugeridasDS_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerLicitacionesSugeridas_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerLicitacionPublicada_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerLlaveQAporLicitacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerLlaveQA_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerOfertaEncriptada_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerPrcPOHeaderPorCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerPrcPOItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerRegistroPymePorRutProveedor_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerTablas_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerTicket_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerTipoTicket_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerUsuarioPorMail_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerUsuarioPorRut_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtenerUsuarioTicketPorUsuario_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtieneLicitacionesBase_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtieneLicitacionesSeguimiento_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtieneOCBase_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtieneTablaPrcRFBHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtieneUsuariosLicitaciones_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObtieneUsuariosOC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PartialLogModel.cs" />
+    <Compile Include="Models\PDC_FechaPlazoTerminoPublicacionPDC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_FechasPlazoPDC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ListadoEmpresaEstadoPublicado_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerControlCambiosPorID_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerLineaProductosServicios_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerListadoPlanesPublicados_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerListadoPlanes_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerPlaneEstado_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerPlanesPorEmpresaTodosPDC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerPlanesPorEmpresa_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerPlanesPorUnidadTodosPDC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerPlanesPorUnidad_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerPlanesPublicadosPorEmpresa_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerPlanProyectoPorID_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerProductosPorId_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerRegiones_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerTipoDeCompras_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ObtenerTipoProyecto_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ReporteOCCompradoresCM_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ReporteOCCompradoresLC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ReporteOCCompradoresTD_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ReporteOCCompradoresTodosCM_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ReporteOCCompradoresTodosLC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PDC_ReporteOCCompradoresTodosTD_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PeriodoTicket.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pimSpcGetAdjudicationSIGFE_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pimSpcGetPublicationSIGFE_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pimSpcGetPurchaseOrderSIGFE_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pimSpcGetSIGFEAcquisitionInformationByOC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcEncObtenerValoresId1_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcEncObtenerValoresId2_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcGetDetailSite_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcLicitacionesSinCertificado_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcObtenerInformacionLicitacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcObtenerInformacionOrdenCompra_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcPOObtieneCotizaciones_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcPOPrintReport_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcRFBValidateDatePublishLS_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSearchAcquisitionClosed_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSearchVerifyAcquisitionClosed_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcAddDocsAgregados_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcBuscaOCProvExcel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcBuscaOCProv_EstadoExcel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcBuscaOCProv_Estado_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcBuscaOCProv_NombreExcel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcBuscaOCProv_Nombre_EstadoExcel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcBuscaOCProv_Nombre_Estado_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcBuscaOCProv_Nombre_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcBuscaOCProv_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcEliminaAntecedenteAdjunto_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcEliminaAntecedente_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcEliminarDocumentoLegal_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcEliminarRequisitoContratar_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetAcquisitionProviders_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetAllprcRFBItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetBillHistoryDTE_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetBillHistory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetBuyerContact_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetDocAdjunto_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetEstadoActualyAnterior_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetEvaluatePOInformationBuyer_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetEvaluatePOInformation_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetGoodAndServiceMiniAdmin_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetGuarantee_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetHistoryAwardDate_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetIssuerInvoice_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetLineData_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetOrganizationContactMiniAdmin_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetOtherClause_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetPOHeaderNameAcquiticions_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetPOInfoByParam_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetPOInfoByRange_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetPOState_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcAprovStateTR_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcAprovTR_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcAwardedProvidersByRFBCode_Desert_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcAwardedProvidersByRFBCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcAwardedProviders_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcAwardSummary_20080731_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRCSPCGETPRCAWARDSUMMARY_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDItemAwardbyRFB_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDItemAwardDesert_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDItemAwardedDesert_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDItemAward_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDItemGoodandServicesDifference_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDItemGoodandServices_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDQuoteByRFBCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDQuoteByRFB_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcBIDQuote_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcCategory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcCriteriaClauseByCategory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcGoodAndService_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcHeadingTest_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcInstitutionsByType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcInstitutions_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcKindOfCriteria_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcLoadForoRespuestas_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcLoadForo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcMeterBidsItems_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcNotAwardedProvidersByRFBCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcNotAwardedProvidersNotTechnicalByRFBCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOApprovalComplete_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOApproval_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOBuyerInfoByID_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOChargeByHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPODiscountByHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPODiscount_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOHeaderByCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOHeaderByIDWithAttachmentsCount_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOHeaderByID_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOHeaderSummary_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOHeaderToVerify_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOItemByHeaderProvider_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOItemByHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOPayBillingInformation_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPorCodeByPOHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOStaticRecipientBuyerContact_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOStaticRecipient_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOTaxByHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOVersionByCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPOVersion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPreviewMakeRazonByUser_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcPreviewMakeRazon_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcProvidersByCategory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcProviders_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcProvSelected_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcREQItemsByCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcREQRequisition_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBApprovalComplete_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBApproval_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBAprovTRStatus_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBAwardCriteriaByRFB_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBAwardCriteria_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBAwardPRECriteriaByRFB_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBByExternalCodeAndOrganization_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBByExternalCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBClause_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBComplete_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBContractTypeCategory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBContractType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBDateMakeRazonPublishLS_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBDateMakeRazonPublish_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBDate_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBEncuestaOpciones_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBEncuestaPregunta_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBEncuesta_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBGuaranteeBase_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBGuaranteeByRFBBID_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBGuaranteeByRFB_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBGuarantee_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBHeaderAndCS_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBHeaderByExternalCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBHeaderComplete_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBItemAdjud_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBItemAwardbyBidItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBItemAwardedByRFBCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBItemAwardSelected2_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBItemAwardSelected_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBItemAward_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBItemByRFBCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBLegalRecordByRFB_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBLegalRecord_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBOrganization_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBProcessSubType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBProcessType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBRequisiteByRFB_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBRequisite_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBSummary_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBVersionByRFBCodeDetail_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBVersionByRFBCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcRFBVersion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcSectionsGoodAndServicebyIdCategory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcSectionsGoodAndServicebySectionID_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcSectionsGoodAndServiceRNP_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcSectionsGoodAndService_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcSectionsMiniAdmin_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcSections_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcVerificatipoAutorizacionIII_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcVerificatipoAutorizacionII_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcVerificatipoAutorizacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetprcXMLDataBD_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetProviderInfoByTaxID_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetProviderInfo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetProvidersLicity_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetRecipientInvoice_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetRFBHeaderDataByExternalCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetRFBItemAward_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetSesionDataWSIntegracion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcGetUserUnitInfo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcLoadDTEProviderToExcel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcLoadDTEToExcel_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarAntecedente_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarCriteriosEvaluacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarDocumentoLegal_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarFechasUsuario_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarGarantias_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarLicitacionOrganismo_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarProductos_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarRegistradoCHP_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarRequerimientosTecnicos_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcMostrarRequisitoContratar_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerAdjunto_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerAntecedenteAdjunto_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerAntecedenteJuridica_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerAntecedente_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerDocumentoLegal_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerFechasLS_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerInformacionLicitacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerObservacion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerRequisitoContratar_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcObtenerRequisito_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublicSearchprcPOHeaderByCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishAdministrativePrecedend_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishApproval_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishAwardApproval_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishDate_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishDefineContract_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishDemandingOrganization_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishGuarantee_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishInvitation_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishLegalRecords_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcPublishRequirement_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadAllprcRFBStatus_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadAttachment_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadAwardedBidsEconomic_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadAwardedBids_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadBidItemsAttachment_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadBidItems_Explanation_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadBidItems_OpeningAdministrative_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadBidItems_OpeningEconomic_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadBidItems_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadBid_QuestionAndAnswer_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadCMBprcRFBProcessType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadCMBprcRFBStatusforOC_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadCMBprcRFBStatus_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadDataType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadDate_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadgblCurrency_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadOrganizationProviders_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadPosponedProcess_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDBidFieldValue_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDConfPay_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDItemByBID_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDItemByRFBItemNoRejets_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDItemByRFBItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDItemRFBItemrbhCode_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDItemRFBItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDItemSum_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDItemToConfirm_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDOpeningCommentByRFB_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDOpeningComment_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDQuoteAndBidItemInformar_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDQuoteAndBidItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDQuoteByHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDQuote_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDSupplierComparativeTableAmountsNORejects_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDSupplierComparativeTableAmounts_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDSupplierComparativeTableNORejects_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcBIDSupplierComparativeTable_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcCriteriaClauseByCategory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcGoodAndServiceOnly_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOApprovalType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOBuyerStatus_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOclause_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPODiscount_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOItemToEvaluate2_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOItemToEvaluate_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOOrderCharge_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOOrderDiscount_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOOrderType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOPaymentMethod_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOPaymentType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOSellerStatus_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcPOShipmentType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcProcessJustify_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_A_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_B_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_C_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_D_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_E_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_F_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_G_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_H_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_I_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_J_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_K_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_L_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_M_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_N_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcREQRequisition_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBActAward_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBApprovalType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBApproval_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBAwardCriteriaII_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBAwardCriteriaScope_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBAwardCriteria_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBAwardTypeCMB_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBAwardType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBBidField_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBBuyUnit_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBClause_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBContractPaymentMethod_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBContractTimePeriod_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBCurrency_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBDateContratacionServicios_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBDateMakeRazonForAfterPublication_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBDateMakeRazonForPublication_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBDateMakeRazon_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBDate_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBDetailedDataHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBGuarantee_A_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBInvitation_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBItem_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBLegalRecord_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBParticipants_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBProcessSubType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBProcessType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBProducts_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBRequisite_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBStatus_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBSummarizedDataHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBTimePeriod_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBUserDefinedDate_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadprcRFBVersion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadRFBItemDetails_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadUOMTime_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReadWizard_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_AcquisitionAwardByOrganization_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_AcquisitionAwardDistinctTotalType_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_AcquisitionAwarded_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_PurchaseOrderAcceptExcepcional_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_PurchaseOrderAccept_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_PurchaseOrderCountByOrganization_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_SupplierAcquisitionAward_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_SupplierAcquisition_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_SupplierAwardParticipate_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_SupplierAward_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcReport_Supplier_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIGetAnswer_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIGetCategory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIGetHistory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIGetQuestionAnswer_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIGetQuestionHeader_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIGetQuestionHistory_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIGetQuestion_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIGetStatus_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIGet_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFIObtenerProveedores_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\prcSpcRFISearchByNumber_Result.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sugerencias.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ticket.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TicketLog.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoTicket.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoUsuario.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioTicket.cs">
+      <DependentUpon>ModelAPI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\estilos.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\equipo\alejandro_gonzalez.jpg" />
+    <Content Include="Images\equipo\alex_aedo.jpg" />
+    <Content Include="Images\equipo\alvaro_canon.jpg" />
+    <Content Include="Images\equipo\andres_castro.jpg" />
+    <Content Include="Images\equipo\daniel_marambio.jpg" />
+    <Content Include="Images\equipo\fabian_luco.jpg" />
+    <Content Include="Images\equipo\jose_bascunan.jpg" />
+    <Content Include="Images\equipo\jose_ortega.jpg" />
+    <Content Include="Images\equipo\juan_licanqueo.jpg" />
+    <Content Include="Images\equipo\juan_pena.jpg" />
+    <Content Include="Images\equipo\maximiliano_henriquez.png" />
+    <Content Include="Images\equipo\oscar_osses.jpg" />
+    <Content Include="Images\equipo\pedro_barreaux.jpg" />
+    <Content Include="Images\equipo\rodrigo_robles.jpg" />
+    <Content Include="Images\equipo\sebastian_del_villar.jpg" />
+    <Content Include="Images\equipo\seidor.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\componentes\cliente_api.js" />
+    <Content Include="Scripts\componentes\listado_proyectos.js" />
+    <Content Include="Scripts\handlebars-v2.0.0.js" />
+    <Content Include="Scripts\handlebars.runtime-v3.0.0.js" />
+    <EntityDeploy Include="Models\ModelAPI.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelAPI.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelAPI.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAPI.edmx</DependentUpon>
+      <LastGenOutput>ModelAPI.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelAPI.edmx.diagram">
+      <DependentUpon>ModelAPI.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ModelAPI.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAPI.edmx</DependentUpon>
+      <LastGenOutput>ModelAPI.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <None Include="Properties\PublishProfiles\dccp-dev-herramientas.pubxml" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Templates\ListadoProyectos.html" />
+    <Content Include="Templates\ResultadoServicioRegistroGeoReferencia.html" />
+    <Content Include="Views\SignalR\Chat.html" />
+    <Content Include="Views\Templates\ListadoProyectos.html" />
+    <Content Include="Views\Templates\ResultadoServicioRegistroGeoReferencia.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\SignalR\SignalR2.cshtml" />
+    <Content Include="Views\Proyectos\Proyectos.cshtml" />
+    <Content Include="Views\DiccionarioDatos\DiccionarioDatos.cshtml" />
+    <Content Include="Views\ClienteApi\LogTicket.cshtml" />
+    <Content Include="Views\ClienteApi\PartialLogTicket.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Filters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ClienteApi\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2589</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Herramientas</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
