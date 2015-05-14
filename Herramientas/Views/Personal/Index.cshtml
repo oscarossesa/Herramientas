@@ -31,6 +31,8 @@
 </div>
 
 <div class="content animate-panel">
+    
+    <button id="add" class="btn btn-info btn-circle" type="button"><i class="fa fa-check"></i></button>
 
     <div class="row">
         <div class="col-lg-3">
@@ -192,3 +194,33 @@
     </div>
 
 </div>
+
+@Scripts.Render("~/bundles/jquery/js")
+
+<script type="text/javascript">
+    $('#add').on('click', function () {
+
+        $.ajax({
+            url: "@Url.Content("~/Personal/Create")",
+            //url: '/Personal/Create',
+            dataType: "json",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify({ personal: { nombre: 'Oscar Osses A.', anexo: '477' } }),
+            async: true,
+            processData: false,
+            cache: false,
+            success: function (data) {
+                if (data == 'ok')
+                    alert('Los datos fueron guardados correctamente.');
+                else
+                    alert('Ocurrio un problema al guardar los datos, por favor, vuelva a intentarlo.');
+            },
+            error: function (xhr) {
+                alert(xhr);
+            }
+        })
+    })
+
+</script>
+
