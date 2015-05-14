@@ -1,0 +1,9 @@
+D:\Desarrollo\GitHub\Herramientas\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+D:\Desarrollo\GitHub\Herramientas\Persistencia\bin\Debug\Persistencia.dll
+D:\Desarrollo\GitHub\Herramientas\Persistencia\bin\Debug\Persistencia.pdb
+D:\Desarrollo\GitHub\Herramientas\Persistencia\bin\Debug\Entidades.dll
+D:\Desarrollo\GitHub\Herramientas\Persistencia\bin\Debug\Newtonsoft.Json.dll
+D:\Desarrollo\GitHub\Herramientas\Persistencia\bin\Debug\Entidades.pdb
+D:\Desarrollo\GitHub\Herramientas\Persistencia\bin\Debug\Newtonsoft.Json.xml
+D:\Desarrollo\GitHub\Herramientas\Persistencia\obj\Debug\Persistencia.dll
+D:\Desarrollo\GitHub\Herramientas\Persistencia\obj\Debug\Persistencia.pdb

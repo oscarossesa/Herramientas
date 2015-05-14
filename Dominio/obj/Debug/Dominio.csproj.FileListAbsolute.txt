@@ -1,0 +1,11 @@
+D:\Desarrollo\GitHub\Herramientas\Dominio\bin\Debug\Dominio.dll
+D:\Desarrollo\GitHub\Herramientas\Dominio\bin\Debug\Dominio.pdb
+D:\Desarrollo\GitHub\Herramientas\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
+D:\Desarrollo\GitHub\Herramientas\Dominio\obj\Debug\Dominio.dll
+D:\Desarrollo\GitHub\Herramientas\Dominio\obj\Debug\Dominio.pdb
+D:\Desarrollo\GitHub\Herramientas\Dominio\bin\Debug\Entidades.dll
+D:\Desarrollo\GitHub\Herramientas\Dominio\bin\Debug\Entidades.pdb
+D:\Desarrollo\GitHub\Herramientas\Dominio\bin\Debug\Persistencia.dll
+D:\Desarrollo\GitHub\Herramientas\Dominio\bin\Debug\Newtonsoft.Json.dll
+D:\Desarrollo\GitHub\Herramientas\Dominio\bin\Debug\Persistencia.pdb
+D:\Desarrollo\GitHub\Herramientas\Dominio\bin\Debug\Newtonsoft.Json.xml
