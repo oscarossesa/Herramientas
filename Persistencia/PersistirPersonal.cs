@@ -1,53 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Entidades;
-using System.IO;
+﻿using Entidades;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Persistencia
 {
     public class PersistirPersonal
     {
-        public bool AgregarPersonal(Personal personal, string path)
+        public List<Personal> GetPersonal(string path)
+        {
+            List<Personal> personas = new List<Personal>();
+
+            using (StreamReader r = new StreamReader(path))
+            {
+                string json = r.ReadToEnd();
+                personas = JsonConvert.DeserializeObject<List<Personal>>(json);
+            }
+
+            return personas;
+        }
+
+        public bool AddPersonal(Personal personal, string path)
         {
             //TODO: persistir obejeto de tipo Personal
 
-            LoadJson2(path);
+            PersistirJson(personal, path);
 
             return true;
         }
 
-        public void LoadJson1()
+        public void PersistirJson(Personal personal, string path)
         {
+            string newJson = string.Empty;
 
-            //var path = Server.MapPath("~/Content/treatments.json");
-            using (StreamReader r = new StreamReader("path"))
-            {
+            using (StreamReader r = new StreamReader(path)) {
                 string json = r.ReadToEnd();
-                List<Item> items = JsonConvert.DeserializeObject<List<Item>>(json);
+                List<Personal> personas = JsonConvert.DeserializeObject<List<Personal>>(json);
+                personas.Add(personal);
+                newJson = JsonConvert.SerializeObject(personas);                
             }
-        }
 
-        public void LoadJson2(string path)
-        {
-            string json = System.IO.File.ReadAllText(path);
-            dynamic jsonObj = JsonConvert.DeserializeObject(json);
-            jsonObj["Personal"][0]["Nombre"] = "Oscar Osses Arriaza";
-            string output = JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-            System.IO.File.WriteAllText(path, output);
+            File.WriteAllText(path, newJson);
         }
-    }
-
-    public class Item
-    {
-        public int millis;
-        public string stamp;
-        public DateTime datetime;
-        public string light;
-        public float temp;
-        public float vcc;
     }
 }

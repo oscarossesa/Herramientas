@@ -1,14 +1,1 @@
-{
-  "Nombre": "Oscar Osses A",
-  "Anexo": "477",
-  "Personal": [
-    {
-      "Nombre": "Oscar Ignacio Osses Arriaza",
-      "Anexo": "477"
-    },
-    {
-      "Nombre": "Jose Ortega.",
-      "Anexo": "478"
-    }
-  ]
-}
+[{"Nombre":"Oscar Ignacio Osses Arriaza","Anexo":477,"Correo":null},{"Nombre":"Jose Ortega.","Anexo":478,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":478,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":478,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":478,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":478,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":478,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":478,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":478,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":478,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":477,"Correo":null},{"Nombre":"Oscar Osses A.","Anexo":477,"Correo":"oscar.osses@chilecompra.cl"},{"Nombre":"Oscar Osses A.","Anexo":477,"Correo":"oscar.osses@chilecompra.cl"},{"Nombre":"Oscar Osses A.","Anexo":477,"Correo":"oscar.osses@chilecompra.cl"}]

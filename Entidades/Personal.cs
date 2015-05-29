@@ -9,6 +9,7 @@ namespace Entidades
     public class Personal
     {
         public string Nombre { get; set; }
-        public string Anexo { get; set; }
+        public int Anexo { get; set; }
+        public string Correo { get; set; }
     }
 }

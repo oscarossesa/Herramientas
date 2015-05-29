@@ -10,6 +10,16 @@ namespace Dominio
 {
     public class DominioPersonal
     {
+        public List<Personal> GetPersonal(string path)
+        {
+            //TODO: persistir el objeto Personal 
+            PersistirPersonal pPersonal = new PersistirPersonal();
+            List<Personal> personas = new List<Personal>();
+            personas = pPersonal.GetPersonal(path);
+
+            return personas;
+        }
+
         public bool AgregarPersonal(Personal personal, string path)
         {
             //TODO: implementar logica de dominio para agregar a una persona de tipo Personal
@@ -26,7 +36,7 @@ namespace Dominio
 
             //TODO: persistir el objeto Personal 
             PersistirPersonal pPersonal = new PersistirPersonal();
-            pPersonal.AgregarPersonal(personal, path);
+            pPersonal.AddPersonal(personal, path);
 
 
             return true;

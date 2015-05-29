@@ -10,203 +10,63 @@
                     <i class="fa fa-arrow-up"></i>
                 </div>
             </a>
-
             <div id="hbreadcrumb" class="pull-right m-t-lg">
                 <ol class="hbreadcrumb breadcrumb">
-                    <li><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>
+                    @*<li><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>*@
                     <li>
-                        <span>App views</span>
+                        <span>Herramientas</span>
                     </li>
                     <li class="active">
-                        <span>Contacts</span>
+                        <span>Funcionarios</span>
                     </li>
                 </ol>
             </div>
             <h2 class="font-light m-b-xs">
-                Compañeros
+                Funcionarios
             </h2>
-            <small>Listado de compañeros por área</small>
+            <small>Listado de funcionarios por área</small>
         </div>
     </div>
 </div>
 
 <div class="content animate-panel">
-    
+
     <button id="add" class="btn btn-info btn-circle" type="button"><i class="fa fa-check"></i></button>
 
-    <div class="row">
-        <div class="col-lg-3">
-            <div class="hpanel hgreen contact-panel">
-                <div class="panel-body">
-                    <span class="label label-success pull-right">NEW</span>
-                    <img alt="logo" class="img-circle m-b" src="~/Images/profile.jpg">
-                    <h3><a href=""> Bradly Danforth </a></h3>
-                    <div class="text-muted font-bold m-b-xs">California, LA</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan.
-                    </p>
-                </div>
-                <div class="panel-footer contact-footer">
-                    <div class="row">
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Projects: </span> <strong>200</strong></div> </div>
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Messages: </span> <strong>300</strong></div> </div>
-                        <div class="col-md-4"> <div class="contact-stat"><span>Views: </span> <strong>400</strong></div> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="hpanel hyellow contact-panel">
-                <div class="panel-body">
-                    <img alt="logo" class="img-circle m-b" src="~/Images/a4.jpg">
-                    <h3><a href=""> Tangela Sternberg </a></h3>
-                    <div class="text-muted font-bold m-b-xs">California, LA</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan.
-                    </p>
-                </div>
-                <div class="panel-footer contact-footer">
-                    <div class="row">
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Projects: </span> <strong>200</strong></div> </div>
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Messages: </span> <strong>300</strong></div> </div>
-                        <div class="col-md-4"> <div class="contact-stat"><span>Views: </span> <strong>400</strong></div> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="hpanel hviolet contact-panel">
-                <div class="panel-body">
-                    <img alt="logo" class="img-circle m-b" src="~/Images/a2.jpg">
-                    <h3><a href=""> Claud Vogan </a></h3>
-                    <div class="text-muted font-bold m-b-xs">California, LA</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan.
-                    </p>
-                </div>
-                <div class="panel-footer contact-footer">
-                    <div class="row">
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Projects: </span> <strong>200</strong></div> </div>
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Messages: </span> <strong>300</strong></div> </div>
-                        <div class="col-md-4"> <div class="contact-stat"><span>Views: </span> <strong>400</strong></div> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="hpanel hblue contact-panel">
-                <div class="panel-body">
-                    <img alt="logo" class="img-circle m-b" src="~/Images/a3.jpg">
-                    <h3><a href=""> Valda Purdy </a></h3>
-                    <div class="text-muted font-bold m-b-xs">California, LA</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan.
-                    </p>
-                </div>
-                <div class="panel-footer contact-footer">
-                    <div class="row">
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Projects: </span> <strong>200</strong></div> </div>
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Messages: </span> <strong>300</strong></div> </div>
-                        <div class="col-md-4"> <div class="contact-stat"><span>Views: </span> <strong>400</strong></div> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-3">
-            <div class="hpanel hblue contact-panel">
-                <div class="panel-body">
-                    <img alt="logo" class="img-circle m-b" src="~/Images/a9.jpg">
-                    <h3><a href="">Max Simson</a></h3>
-                    <div class="text-muted font-bold m-b-xs">California, LA</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan.
-                    </p>
-                </div>
-                <div class="panel-footer contact-footer">
-                    <div class="row">
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Projects: </span> <strong>200</strong></div> </div>
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Messages: </span> <strong>300</strong></div> </div>
-                        <div class="col-md-4"> <div class="contact-stat"><span>Views: </span> <strong>400</strong></div> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="hpanel hgreen contact-panel">
-                <div class="panel-body">
-                    <img alt="logo" class="img-circle m-b" src="~/Images/a5.jpg">
-                    <h3><a href="">Max Simson</a></h3>
-                    <div class="text-muted font-bold m-b-xs">California, LA</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan.
-                    </p>
-                </div>
-                <div class="panel-footer contact-footer">
-                    <div class="row">
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Projects: </span> <strong>200</strong></div> </div>
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Messages: </span> <strong>300</strong></div> </div>
-                        <div class="col-md-4"> <div class="contact-stat"><span>Views: </span> <strong>400</strong></div> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="hpanel hyellow contact-panel">
-                <div class="panel-body">
-                    <span class="label label-warning pull-right">SPECIAL</span>
-                    <img alt="logo" class="img-circle m-b" src="~/Images/a6.jpg">
-                    <h3><a href="">Max Simson</a></h3>
-                    <div class="text-muted font-bold m-b-xs">California, LA</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan.
-                    </p>
-                </div>
-                <div class="panel-footer contact-footer">
-                    <div class="row">
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Projects: </span> <strong>200</strong></div> </div>
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Messages: </span> <strong>300</strong></div> </div>
-                        <div class="col-md-4"> <div class="contact-stat"><span>Views: </span> <strong>400</strong></div> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="hpanel hred contact-panel">
-                <div class="panel-body">
-                    <img alt="logo" class="img-circle m-b" src="~/Images/a7.jpg">
-                    <h3><a href="">Max Simson</a></h3>
-                    <div class="text-muted font-bold m-b-xs">California, LA</div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan.
-                    </p>
-                </div>
-                <div class="panel-footer contact-footer">
-                    <div class="row">
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Projects: </span> <strong>200</strong></div> </div>
-                        <div class="col-md-4 border-right"> <div class="contact-stat"><span>Messages: </span> <strong>300</strong></div> </div>
-                        <div class="col-md-4"> <div class="contact-stat"><span>Views: </span> <strong>400</strong></div> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="contenedorPersonal"></div>        
 
 </div>
 
 @Scripts.Render("~/bundles/jquery/js")
+@Scripts.Render("~/bundles/handlebars/js")
 
 <script type="text/javascript">
+    var personalGetActionUrl = '@Url.Action("Get", "Personal")';
+    var personalCreateActionUrl = '@Url.Action("Create", "Personal")';
+
+    $(document).ready(function () {
+        $.getJSON(personalGetActionUrl, null, function (data) {            
+            var source = $("#PersonalTemplate").html();
+            var template = Handlebars.compile(source);
+            $("#contenedorPersonal").html(template(data));
+        });
+    });
+
     $('#add').on('click', function () {
 
+        var persona = {};
+        persona.Nombre = "Oscar Osses A.";
+        persona.Anexo = 477;
+        persona.Correo = "oscar.osses@chilecompra.cl";
+
         $.ajax({
-            url: "@Url.Content("~/Personal/Create")",
+            url: personalCreateActionUrl,
+            //url: "@Url.Content("~/Personal/Create")",
             //url: '/Personal/Create',
             dataType: "json",
             type: "POST",
             contentType: 'application/json; charset=utf-8',
-            data: JSON.stringify({ personal: { nombre: 'Oscar Osses A.', anexo: '477' } }),
+            data: JSON.stringify({ personal: persona }),
             async: true,
             processData: false,
             cache: false,
@@ -222,5 +82,49 @@
         })
     })
 
+    Handlebars.registerHelper('grouped_each', function (every, context, options) {
+        var out = "", subcontext = [], i;
+        if (context && context.length > 0) {
+            for (i = 0; i < context.length; i++) {
+                if (i > 0 && i % every === 0) {
+                    out += options.fn(subcontext);
+                    subcontext = [];
+                }
+                subcontext.push(context[i]);
+            }
+            out += options.fn(subcontext);
+        }
+        return out;
+    });
 </script>
 
+<script type="text/x-handlebars-template" id="PersonalTemplate">
+    <div class="panel-group proyecto lazul" id="accordion" role="tablist" aria-multiselectable="true">
+        {{#grouped_each 4 .}}
+        <div class="row">
+            {{#each this }}
+            <div class="col-lg-3">
+                <div class="hpanel hgreen contact-panel">
+                    <div class="panel-body">
+                        <span class="label label-success pull-right">NEW</span>
+                        <img alt="logo" class="img-circle m-b" src="Images/profile.jpg">
+                        <h3><a href=""> {{Nombre}} </a></h3>
+                        <div class="text-muted font-bold m-b-xs">{{Correo}}</div>
+                        <p>
+
+                        </p>
+                    </div>
+                    <div class="panel-footer contact-footer">
+                        <div class="row">
+                            <div class="col-md-4 border-right"> <div class="contact-stat"><span>Anexo: </span> <strong>{{Anexo}}</strong></div> </div>
+                            <div class="col-md-4 border-right"> <div class="contact-stat"><span> </span> <strong></strong></div> </div>
+                            <div class="col-md-4"> <div class="contact-stat"><span> </span> <strong></strong></div> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/grouped_each}}
+        </div>
+</script>

@@ -21,25 +21,26 @@ namespace Herramientas.Controllers
             return View();
         }
 
+        //
+        // GET: /Personal/
+
+        public JsonResult Get()
+        {
+            var path = Server.MapPath("~/personal.json");
+
+            //do something with model
+            DominioPersonal dominioPersonal = new DominioPersonal();
+            List<Personal> personas = dominioPersonal.GetPersonal(path);
+
+            return Json(personas, JsonRequestBehavior.AllowGet);
+        }
+
         [HttpPost]
         public ActionResult Create(Personal personal)
         {
             try
             {
                 var path = Server.MapPath("~/personal.json");
-
-                //using (StreamReader r = new StreamReader(path))
-                //{
-                //    string json = r.ReadToEnd();
-                //    List<Personal> items = JsonConvert.DeserializeObject<List<Personal>>(json);
-                //}
-
-                //string json = System.IO.File.ReadAllText(path);
-                //dynamic jsonObj = JsonConvert.DeserializeObject(json);
-                //jsonObj["Personal"][0]["Nombre"] = "Oscar Osses Arriaza";
-                //string output = JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-                //System.IO.File.WriteAllText(path, output);
-
 
                 //do something with model
                 DominioPersonal dominioPersonal = new DominioPersonal();
@@ -53,15 +54,5 @@ namespace Herramientas.Controllers
             
             return Json("ok");
         }
-    }
-
-    public class Item
-    {
-        public int millis;
-        public string stamp;
-        public DateTime datetime;
-        public string light;
-        public float temp;
-        public float vcc;
     }
 }
