@@ -1,5 +1,4 @@
-﻿using Herramientas.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,10 +15,10 @@ namespace Herramientas.Controllers
         {
             //LogTicket();
 
-            //return View();
+            return View();
 
             //return View(new PartialModel2() { partialModel = Sampledetails() });
-            return View(new PartialLogModel() { TicketLogList = LogTicket() });
+            //return View(new PartialLogModel() { TicketLogList = LogTicket() });
         }
 
         //private List<PartialLogModel> Sampledetails()
@@ -50,31 +49,31 @@ namespace Herramientas.Controllers
         //    return model;
         //}
 
-        public List<TicketLog> LogTicket()
-        {
-            var viewModel = new List<TicketLog>();
+        //public List<TicketLog> LogTicket()
+        //{
+        //    var viewModel = new List<TicketLog>();
 
-            using (DCCPProcurementEntities db = new DCCPProcurementEntities())
-            {
-                var result = from ticketLog in db.TicketLog
-                             where ticketLog.IdTicket == 0
-                             select ticketLog;
+        //    //using (DCCPProcurementEntities db = new DCCPProcurementEntities())
+        //    //{
+        //    //    var result = from ticketLog in db.TicketLog
+        //    //                 where ticketLog.IdTicket == 0
+        //    //                 select ticketLog;
                 
-                foreach (var ticketLog in result)
-                    {
-                        viewModel.Add(new TicketLog
-                        {
-                            Id = ticketLog.Id,
-                            Fecha = ticketLog.Fecha,
-                            Ip = ticketLog.Ip,
-                            Texto = ticketLog.Texto,
-                            IdTicket = ticketLog.IdTicket,
-                            MasInformacion = ticketLog.MasInformacion
-                        });                       
-                    }
-            }            
+        //    //    foreach (var ticketLog in result)
+        //    //        {
+        //    //            viewModel.Add(new TicketLog
+        //    //            {
+        //    //                Id = ticketLog.Id,
+        //    //                Fecha = ticketLog.Fecha,
+        //    //                Ip = ticketLog.Ip,
+        //    //                Texto = ticketLog.Texto,
+        //    //                IdTicket = ticketLog.IdTicket,
+        //    //                MasInformacion = ticketLog.MasInformacion
+        //    //            });                       
+        //    //        }
+        //    //}            
 
-            return viewModel;
-        }
+        //    return viewModel;
+        //}
     }
 }

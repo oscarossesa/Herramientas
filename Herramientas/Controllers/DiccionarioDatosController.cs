@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Herramientas.Models;
 
 namespace Herramientas.Controllers
 {
@@ -13,68 +12,73 @@ namespace Herramientas.Controllers
         // GET: /DiccionarioDatos/
         public ActionResult DiccionarioDatos()
         {
-            using (DCCPProcurementEntities db = new DCCPProcurementEntities())
-            {
 
-                //var result = db.ObtenerTablas();
+            return View();
 
-                //Console.WriteLine("paso");
+            //using (DCCPProcurementEntities db = new DCCPProcurementEntities())
+            //{
 
-                //foreach (ObtenerTablas_Result otr in result)
-                //{
-                //    //Console.WriteLine(otr);
+            //    //var result = db.ObtenerTablas();
 
-                //    //new EstructuraTabla {
-                //    //    Tabla = otr.table,
-                //    //    Columna = otr.column,
-                //    //    EsAutonumerico = otr.Es_Autonumerico,
-                //    //    ForeignKey = otr.ForeignKey,
-                //    //    Presicion = otr.Precision,
-                //    //    PermiteNulos = otr.Permite_Nulls,
-                //    //    ObjectId = otr.object_id,
-                //    //    MaxLength = otr.max_length,
-                //    //    Tipo = otr.type,
-                //    //    ReferenciaNombreColumna = otr.ReferenceColumnName,
-                //    //    ReferenciaNombreTabla = otr.ReferenceTableName
-                //    //}
-                //}
+            //    //Console.WriteLine("paso");
 
-                ////var result = db.ObtenerTablas();
+            //    //foreach (ObtenerTablas_Result otr in result)
+            //    //{
+            //    //    //Console.WriteLine(otr);
 
-                ////var tableList = db.Database.SqlQuery<EstructuraTabla>("exec ObtenerTablas").ToList<EstructuraTabla>();
+            //    //    //new EstructuraTabla {
+            //    //    //    Tabla = otr.table,
+            //    //    //    Columna = otr.column,
+            //    //    //    EsAutonumerico = otr.Es_Autonumerico,
+            //    //    //    ForeignKey = otr.ForeignKey,
+            //    //    //    Presicion = otr.Precision,
+            //    //    //    PermiteNulos = otr.Permite_Nulls,
+            //    //    //    ObjectId = otr.object_id,
+            //    //    //    MaxLength = otr.max_length,
+            //    //    //    Tipo = otr.type,
+            //    //    //    ReferenciaNombreColumna = otr.ReferenceColumnName,
+            //    //    //    ReferenciaNombreTabla = otr.ReferenceTableName
+            //    //    //}
+            //    //}
 
-                ////foreach (EstructuraTabla et in tableList)
-                ////{
-                ////    Console.WriteLine(et);
+            //    ////var result = db.ObtenerTablas();
+
+            //    ////var tableList = db.Database.SqlQuery<EstructuraTabla>("exec ObtenerTablas").ToList<EstructuraTabla>();
+
+            //    ////foreach (EstructuraTabla et in tableList)
+            //    ////{
+            //    ////    Console.WriteLine(et);
                     
-                ////}
+            //    ////}
 
-                ////return RESULT;
-                return View(db.ObtenerTablas().AsEnumerable());
-            }      
+            //    ////return RESULT;
+            //    return View(db.ObtenerTablas().AsEnumerable());
+            //}      
 
             
         }
         
-        public void ObtenerEstructuraTablas()
-        {
-            //TicketLog tl = null;
+        //public void ObtenerEstructuraTablas()
+        //{
+        //    //TicketLog tl = null;
 
-            using (DCCPProcurementEntities db = new DCCPProcurementEntities())
-            {
+        //    return View();
 
-                var result = db.ObtenerTablas();
+        //    //using (DCCPProcurementEntities db = new DCCPProcurementEntities())
+        //    //{
 
-                Console.WriteLine("paso");
+        //    //    var result = db.ObtenerTablas();
 
-                foreach (ObtenerTablas_Result otr in result)
-                {
-                    //Console.WriteLine(otr);
-                }
+        //    //    Console.WriteLine("paso");
 
-                //return RESULT;
-            }            
-        }
+        //    //    foreach (ObtenerTablas_Result otr in result)
+        //    //    {
+        //    //        //Console.WriteLine(otr);
+        //    //    }
+
+        //    //    //return RESULT;
+        //    //}            
+        //}
 
     }
 }

@@ -3,12 +3,15 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Contratos.Persistencia;
 
 namespace Persistencia
 {
-    public class PersistirPersonal
+    public class PersistirPersonal : IPersistenciaPersonal
     {
-        public List<Personal> GetPersonal(string path)
+        const string path = "Environment. Server.MapPath(~/personal.json);";
+
+        public List<Personal> GetPersonal()
         {
             List<Personal> personas = new List<Personal>();
 
@@ -21,18 +24,20 @@ namespace Persistencia
             return personas;
         }
 
-        public bool AddPersonal(Personal personal, string path)
+        public bool AddPersonal(Personal personal)
         {
             //TODO: persistir obejeto de tipo Personal
 
-            PersistirJson(personal, path);
+            PersistirJson(personal);
+            //PersistirBD(personal);
 
             return true;
         }
 
-        public void PersistirJson(Personal personal, string path)
+        public void PersistirJson(Personal personal)
         {
             string newJson = string.Empty;
+            
 
             using (StreamReader r = new StreamReader(path)) {
                 string json = r.ReadToEnd();

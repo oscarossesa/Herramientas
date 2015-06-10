@@ -183,5 +183,7 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Dominio.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Entidades.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Dominio.pdb
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Entidades.pdb
-D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Persistencia.dll
-D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Persistencia.pdb
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Contratos.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Contratos.pdb
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\PersistenciaJson.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\PersistenciaJson.pdb

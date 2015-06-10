@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Herramientas.Models;
 using Dominio;
 using Entidades;
 using System.IO;
@@ -13,6 +12,11 @@ namespace Herramientas.Controllers
 {
     public class PersonalController : Controller
     {
+        DominioPersonal _dominioPersonal;
+        public PersonalController()
+        {
+            _dominioPersonal = new DominioPersonal();
+        }
         //
         // GET: /Personal/
 
@@ -26,11 +30,8 @@ namespace Herramientas.Controllers
 
         public JsonResult Get()
         {
-            var path = Server.MapPath("~/personal.json");
-
-            //do something with model
-            DominioPersonal dominioPersonal = new DominioPersonal();
-            List<Personal> personas = dominioPersonal.GetPersonal(path);
+            //var path = Server.MapPath("~/personal.json");        
+            List<Personal> personas = _dominioPersonal.GetPersonal();
 
             return Json(personas, JsonRequestBehavior.AllowGet);
         }
@@ -44,8 +45,8 @@ namespace Herramientas.Controllers
 
                 //do something with model
                 DominioPersonal dominioPersonal = new DominioPersonal();
-                if (!dominioPersonal.AgregarPersonal(personal, path))
-                    return Json("error");
+                dominioPersonal.AddPersonal(personal);
+                    
             }
             catch(Exception ex)
             {

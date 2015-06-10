@@ -43,13 +43,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Contratos\Contratos.csproj">
+      <Project>{5fa69a77-e8e2-47bc-96d7-da85ac3cdfd9}</Project>
+      <Name>Contratos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{4785d267-9691-45b3-aefb-b58365670036}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Persistencia\Persistencia.csproj">
-      <Project>{a051fd7c-120d-402e-9842-e81854f12bd3}</Project>
-      <Name>Persistencia</Name>
+    <ProjectReference Include="..\PersistenciaBD\PersistenciaBD.csproj">
+      <Project>{b0413e1e-847f-4a84-8d8e-62f304ee9ac2}</Project>
+      <Name>PersistenciaBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersistenciaJson\PersistenciaJson.csproj">
+      <Project>{0b722b60-8ac8-46dc-bed0-053d6cda33e5}</Project>
+      <Name>PersistenciaJson</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

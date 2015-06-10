@@ -1,26 +1,34 @@
-﻿using System;
+﻿using Contratos.Dominio;
+using Entidades;
+using PersistenciaJson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entidades;
-using Persistencia;
 
 namespace Dominio
 {
-    public class DominioPersonal
+    public class DominioPersonal : IDominioPersonal
     {
-        public List<Personal> GetPersonal(string path)
+        PersistirPersonal _persistirPersonal;
+        
+        public DominioPersonal()
         {
-            //TODO: persistir el objeto Personal 
-            PersistirPersonal pPersonal = new PersistirPersonal();
+            _persistirPersonal = new PersistirPersonal();
+        }
+
+        public List<Personal> GetPersonal()
+        {
+            //TODO: persistir el objeto Personal
+            
             List<Personal> personas = new List<Personal>();
-            personas = pPersonal.GetPersonal(path);
+            personas = _persistirPersonal.GetPersonal();
 
             return personas;
         }
 
-        public bool AgregarPersonal(Personal personal, string path)
+        public int AddPersonal(Personal personal)
         {
             //TODO: implementar logica de dominio para agregar a una persona de tipo Personal
 
@@ -34,12 +42,10 @@ namespace Dominio
                 throw new ArgumentException("Anexo debe ser mayor que 0.");
             }
 
-            //TODO: persistir el objeto Personal 
-            PersistirPersonal pPersonal = new PersistirPersonal();
-            pPersonal.AddPersonal(personal, path);
+            //TODO: persistir el objeto Personal
+            _persistirPersonal.AddPersonal(personal);
 
-
-            return true;
+            return 1;
         }
     }
 }
