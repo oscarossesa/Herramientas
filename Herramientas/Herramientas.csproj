@@ -365,6 +365,7 @@
     <Content Include="personal.json" />
     <None Include="Properties\PublishProfiles\dccp-dev-herramientas %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\dccp-dev-herramientas.pubxml" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />

@@ -36,6 +36,9 @@
         <li class="@Html.IsSelected(controller: "Proyectos")">
             <a href="@Url.Action("Proyectos", "Proyectos")"> <span class="nav-label">Proyectos</span><span class="label label-warning pull-right">NEW</span> </a>
         </li>
+        <li class="@Html.IsSelected(controller: "DiccionarioDatos")">
+            <a href="@Url.Action("DiccionarioDatos", "DiccionarioDatos")"> <span class="nav-label">Diccionario de Datos</span><span class="label label-warning pull-right">NEW</span> </a>
+        </li>
         @*<li class="@Html.IsSelected(controller: "Interface")">
         <a href="#"><span class="nav-label">Interface</span><span class="fa arrow"></span> </a>
         <ul class="nav nav-second-level">
