@@ -13,16 +13,20 @@
                     <table cellpadding="1" cellspacing="1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
+                                <th>Tabla</th>
                                 <th>Columna</th>
                                 <th>Tipo</th>
+                                <th>Largo</th>
                                 <th>Descripción</th>
                             </tr>
                         </thead>
                         <tbody>
                             {{#each .}}
                             <tr>
+                                <td>{{Tabla}}</td>
                                 <td>{{Columna}}</td>
                                 <td>{{Tipo}}</td>
+                                <td>{{Largo}}</td>
                                 <td>{{Descripcion}}</td>
                             </tr>
                             {{/each}}

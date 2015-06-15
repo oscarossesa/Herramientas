@@ -11,6 +11,7 @@ namespace Common.Entities
         public string Tabla { get; set; }
         public string Columna { get; set; }
         public string Tipo { get; set; }
+        public Int16 Largo { get; set; }
         public string Descripcion { get; set; }
     }
 
