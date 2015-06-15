@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IPersonalRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Contracts\IPersonalService.cs" />
-    <Compile Include="Contracts\IPersonalRepository.cs" />
     <Compile Include="Implementations\DiccionarioSerivice.cs" />
     <Compile Include="Implementations\PersonalService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
