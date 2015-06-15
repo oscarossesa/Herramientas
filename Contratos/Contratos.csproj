@@ -44,9 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{4785d267-9691-45b3-aefb-b58365670036}</Project>
-      <Name>Entidades</Name>
+    <ProjectReference Include="..\Comun\Common.csproj">
+      <Project>{98de8a2c-2f2a-44c2-a39d-f532b111a083}</Project>
+      <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

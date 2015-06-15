@@ -1,22 +1,20 @@
-﻿using System;
+﻿using Common.Entities;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using Dominio;
-using Entidades;
-using System.IO;
-using Newtonsoft.Json;
+using Services.Implementations;
 
 namespace Herramientas.Controllers
 {
     public class PersonalController : Controller
     {
-        DominioPersonal _dominioPersonal;
+        private PersonalService _personalService;
+
         public PersonalController()
         {
-            _dominioPersonal = new DominioPersonal();
+            _personalService = new PersonalService();
         }
+
         //
         // GET: /Personal/
 
@@ -30,9 +28,7 @@ namespace Herramientas.Controllers
 
         public JsonResult Get()
         {
-            //var path = Server.MapPath("~/personal.json");        
-            List<Personal> personas = _dominioPersonal.GetPersonal();
-
+            List<Personal> personas = _personalService.GetPersonal();
             return Json(personas, JsonRequestBehavior.AllowGet);
         }
 
@@ -42,17 +38,13 @@ namespace Herramientas.Controllers
             try
             {
                 var path = Server.MapPath("~/personal.json");
-
-                //do something with model
-                DominioPersonal dominioPersonal = new DominioPersonal();
-                dominioPersonal.AddPersonal(personal);
-                    
+                _personalService.AddPersonal(personal);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return Json(ex.Message);
             }
-            
+
             return Json("ok");
         }
     }

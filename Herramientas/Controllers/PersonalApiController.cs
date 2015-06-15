@@ -1,10 +1,7 @@
-﻿using Dominio;
-using Entidades;
+﻿using Services.Implementations;
+using Common.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Mvc;
 
@@ -12,18 +9,16 @@ namespace Herramientas.Controllers
 {
     public class PersonalApiController : ApiController
     {
-        DominioPersonal _dominioPersonal;
+        private PersonalService _personalService;
 
         public PersonalApiController()
         {
-            DominioPersonal _dominioPersonal = new DominioPersonal();
+            _personalService = new PersonalService();
         }
-        
+
         public JsonResult Get()
         {
-            //var path = Server.MapPath("~/personal.json");
-            List<Personal> personas = _dominioPersonal.GetPersonal();
-
+            List<Personal> personas = _personalService.GetPersonal();
             return Json(personas, JsonRequestBehavior.AllowGet);
         }
 

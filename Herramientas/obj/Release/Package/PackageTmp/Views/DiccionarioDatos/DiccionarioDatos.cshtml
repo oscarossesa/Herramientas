@@ -1,14 +1,32 @@
-﻿@model IEnumerable<Herramientas.Models.ObtenerTablas_Result>
+﻿<div class="normalheader transition animated fadeIn">
+    <div class="hpanel">
+        <div class="panel-body">
+            <a class="small-header-action" href="">
+                <div class="clip-header">
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+            </a>
+            <div id="hbreadcrumb" class="pull-right m-t-lg">
+                <ol class="hbreadcrumb breadcrumb">
+                    @*<li><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>*@
+                    <li>
+                        <span>Herramientas</span>
+                    </li>
+                    <li class="active">
+                        <span>Diccionario de Datos</span>
+                    </li>
+                </ol>
+            </div>
+            <h2 class="font-light m-b-xs">
+                Diccionario de Datos
+            </h2>
+            <small>Listado de campos de la tabla</small>
+        </div>
+    </div>
+</div>
 
-@{
-    ViewBag.Title = "DiccionarioDatos";
-}
+<div class="content animate-panel">
 
-<h2>DiccionarioDatos</h2>
+    <div id="contenedorDiccionario"></div>
 
-
-
-@foreach(var item in Model){
-    @item.table
-    
-}
+</div>

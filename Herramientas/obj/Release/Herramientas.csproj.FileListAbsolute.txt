@@ -78,7 +78,6 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.OAuth.Consumer
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.OAuth.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.OpenId.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
-D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Entidades.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\EntityFramework.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\EntityFramework.SqlServer.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Microsoft.AspNet.SignalR.Core.dll
@@ -102,11 +101,9 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Web.WebPages.Razor.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\WebGrease.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\WebMatrix.Data.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\WebMatrix.WebData.dll
-D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Persistencia.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Org.Mentalis.Security.Cryptography.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Mono.Math.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Dominio.pdb
-D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Entidades.pdb
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.AspNet.xml
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.Core.xml
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.OAuth.xml
@@ -132,7 +129,6 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Web.WebPages.Deploymen
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Web.WebPages.Razor.xml
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\WebMatrix.Data.xml
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\WebMatrix.WebData.xml
-D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Persistencia.pdb
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Org.Mentalis.Security.Cryptography.xml
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Mono.Math.xml
 D:\Desarrollo\GitHub\Herramientas\Herramientas\obj\Release\Herramientas.csprojResolveAssemblyReference.cache
@@ -214,3 +210,11 @@ D:\GitHub\oscarossesa\Herramientas\Herramientas\bin\Mono.Math.xml
 D:\GitHub\oscarossesa\Herramientas\Herramientas\obj\Release\Herramientas.csprojResolveAssemblyReference.cache
 D:\GitHub\oscarossesa\Herramientas\Herramientas\obj\Release\Herramientas.dll
 D:\GitHub\oscarossesa\Herramientas\Herramientas\obj\Release\Herramientas.pdb
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Common.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Contratos.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\PersistenciaJson.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Common.pdb
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Contratos.pdb
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Antlr3.Runtime.pdb
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Web.Optimization.xml
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\PersistenciaJson.pdb

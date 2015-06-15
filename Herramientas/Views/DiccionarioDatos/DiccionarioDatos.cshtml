@@ -1,14 +1,46 @@
-﻿@model IEnumerable<Herramientas.Models.ObtenerTablas_Result>
+﻿<div class="normalheader transition animated fadeIn">
+    <div class="hpanel">
+        <div class="panel-body">
+            <a class="small-header-action" href="">
+                <div class="clip-header">
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+            </a>
+            <div id="hbreadcrumb" class="pull-right m-t-lg">
+                <ol class="hbreadcrumb breadcrumb">
+                    @*<li><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>*@
+                    <li>
+                        <span>Herramientas</span>
+                    </li>
+                    <li class="active">
+                        <span>Diccionario de Datos</span>
+                    </li>
+                </ol>
+            </div>
+            <h2 class="font-light m-b-xs">
+                Diccionario de Datos
+            </h2>
+            <small>Listado de campos de la tabla</small>
+        </div>
+    </div>
+</div>
 
-@{
-    ViewBag.Title = "DiccionarioDatos";
-}
+<div class="content animate-panel">
 
-<h2>DiccionarioDatos</h2>
+    <div id="content1"></div>
+
+    <div id="content"></div>
+
+</div>
 
 
 
-@foreach(var item in Model){
-    @item.table
-    
+@section Scripts {
+
+<script src="~/Scripts/react/react-0.13.1.min.js"></script>
+<script src="~/Scripts/showdown.min.js"></script>
+<script src="~/Scripts/componentes/react_diccionario_datos.jsx"></script>
+<script src="~/Scripts/componentes/diccionario.js"></script>    
+    @Scripts.Render("~/bundles/handlebars/js")
+
 }

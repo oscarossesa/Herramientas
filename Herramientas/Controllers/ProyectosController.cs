@@ -16,5 +16,12 @@ namespace Herramientas.Controllers
             return View();
         }
 
+        //
+        // GET: /Detalle/
+
+        public ActionResult Detalles()
+        {
+            return View();
+        }
     }
 }
