@@ -117,7 +117,6 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Herramientas.dll.config
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Herramientas.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Herramientas.pdb
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Antlr3.Runtime.dll
-D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DELETE_ME.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.AspNet.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.Core.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DotNetOpenAuth.OAuth.Consumer.dll
@@ -285,3 +284,10 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\React.Web.Mvc4.xml
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\ru-ru\JavaScriptEngineSwitcher.Core.resources.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\ru-ru\JavaScriptEngineSwitcher.V8.resources.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\ru-ru\MsieJavaScriptEngine.resources.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Net.Http.Extensions.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Net.Http.Primitives.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Web.Mvc.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Net.Http.Extensions.xml
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Net.Http.Primitives.xml
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Web.Mvc.xml
+D:\Desarrollo\GitHub\Herramientas\Herramientas\obj\Debug\Herramientas.csproj.App.config

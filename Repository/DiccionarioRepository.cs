@@ -12,7 +12,7 @@ namespace Repository
         public IList<Diccionario> GetTablas()
         {
             IList<Diccionario> lista;
-            using (var connection = DBHelper.Connect("DCCPProcurement"))
+            using (var connection = DBHelper.Connect("CPM"))
             {
                 connection.Open();
                 lista = connection.Query<Diccionario>("ObtenerTablas", commandType: CommandType.StoredProcedure).ToList();

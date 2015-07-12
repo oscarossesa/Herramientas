@@ -11,5 +11,7 @@ namespace Common.Entities
         public string Nombre { get; set; }
         public int Anexo { get; set; }
         public string Correo { get; set; }
+
+        public string Imagen { get; set; }
     }
 }
