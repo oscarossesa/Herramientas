@@ -14,16 +14,16 @@ namespace SitioWeb
 
             // Homer script
             bundles.Add(new ScriptBundle("~/bundles/homer/js").Include(
-                      "~/Vendor/metisMenu/dist/metisMenu.min.js",
-                      "~/Vendor/iCheck/icheck.min.js",
-                      "~/Vendor/peity/jquery.peity.min.js",
-                      "~/Vendor/sparkline/index.js",
+                      "~/Content/metisMenu/dist/metisMenu.min.js",
+                      "~/Content/iCheck/icheck.min.js",
+                      "~/Content/peity/jquery.peity.min.js",
+                      "~/Content/sparkline/index.js",
                       "~/Scripts/homer.js",
                       "~/Scripts/charts.js"));
 
             // Animate.css
             bundles.Add(new StyleBundle("~/bundles/animate/css").Include(
-                      "~/Vendor/animate.css/animate.min.css"));
+                      "~/Content/animate.css/animate.min.css", new CssRewriteUrlTransform()));
 
             // Pe-icon-7-stroke
             bundles.Add(new StyleBundle("~/bundles/peicon7stroke/css").Include(
@@ -31,23 +31,23 @@ namespace SitioWeb
 
             // Font Awesome icons style
             bundles.Add(new StyleBundle("~/bundles/font-awesome/css").Include(
-                      "~/Vendor/fontawesome/css/font-awesome.min.css", new CssRewriteUrlTransform()));
+                      "~/Content/fontawesome/css/font-awesome.min.css", new CssRewriteUrlTransform()));
 
             // Bootstrap style
             bundles.Add(new StyleBundle("~/bundles/bootstrap/css").Include(
-                      "~/Vendor/bootstrap/dist/css/bootstrap.min.css", new CssRewriteUrlTransform()));
+                      "~/Content/bootstrap/dist/css/bootstrap.min.css", new CssRewriteUrlTransform()));
 
             // Bootstrap
             bundles.Add(new ScriptBundle("~/bundles/bootstrap/js").Include(
-                      "~/Vendor/bootstrap/dist/js/bootstrap.min.js"));
+                      "~/Content/bootstrap/dist/js/bootstrap.min.js", new CssRewriteUrlTransform()));
 
             // jQuery
             bundles.Add(new ScriptBundle("~/bundles/jquery/js").Include(
-                      "~/Vendor/jquery/dist/jquery.min.js"));
+                      "~/Scripts/jquery/dist/jquery.min.js", new CssRewriteUrlTransform()));
 
             // handlebars
             bundles.Add(new ScriptBundle("~/bundles/handlebars/js").Include(
-                      "~/Scripts/handlebars-v2.0.0.js"));
+                      "~/Scripts/handlebars-v2.0.0.js", new CssRewriteUrlTransform()));
 
             // Datatables
             bundles.Add(new ScriptBundle("~/bundles/datatables/js").Include(
@@ -69,7 +69,7 @@ namespace SitioWeb
             bundles.Add(new StyleBundle("~/bundles/dataTables.tableTools/css").Include(
                       "~/Content/dataTables.tableTools.css"));
 
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
         }
     }
 }
