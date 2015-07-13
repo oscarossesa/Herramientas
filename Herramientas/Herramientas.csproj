@@ -393,6 +393,7 @@
     <Content Include="Scripts\handlebars-v2.0.0.js" />
     <Content Include="Scripts\handlebars.runtime-v3.0.0.js" />
     <Content Include="Scripts\homer.js" />
+    <None Include="Properties\PublishProfiles\oscarosses.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -400,8 +401,6 @@
     <Content Include="Icons\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.ttf" />
     <Content Include="Icons\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.woff" />
     <Content Include="personal.json" />
-    <None Include="Properties\PublishProfiles\dccp-dev-herramientas - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\dccp-dev-herramientas - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Content Include="Scripts\componentes\HelloWorld.jsx" />
     <Content Include="Scripts\componentes\react_diccionario_datos.jsx" />

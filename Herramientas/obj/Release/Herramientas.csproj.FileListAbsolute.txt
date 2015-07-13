@@ -218,3 +218,4 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Contratos.pdb
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Antlr3.Runtime.pdb
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\System.Web.Optimization.xml
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\PersistenciaJson.pdb
+D:\Desarrollo\GitHub\Herramientas\Herramientas\obj\Release\Herramientas.csproj.App.config
