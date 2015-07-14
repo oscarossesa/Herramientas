@@ -409,7 +409,6 @@
     <Content Include="Images\equipo\rodrigo_robles.jpg" />
     <Content Include="Images\equipo\sebastian_del_villar.jpg" />
     <Content Include="Images\equipo\seidor.png" />
-    <Content Include="loading-bars.svg" />
     <Content Include="Scripts\charts.js" />
     <Content Include="Scripts\handlebars-v2.0.0.js" />
     <Content Include="Scripts\handlebars.runtime-v3.0.0.js" />
