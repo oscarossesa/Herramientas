@@ -1,5 +1,5 @@
 ﻿using Common.Entities;
-using Dapper;
+//using Dapper;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,17 +9,17 @@ namespace Repository
 {
     public class DiccionarioRepository
     {
-        public IList<Diccionario> GetTablas()
-        {
-            IList<Diccionario> lista;
-            using (var connection = DBHelper.Connect("CPM"))
-            {
-                connection.Open();
-                lista = connection.Query<Diccionario>("ObtenerTablas", commandType: CommandType.StoredProcedure).ToList();
-            }
+        //public IList<Diccionario> GetTablas()
+        //{
+        //    IList<Diccionario> lista;
+        //    using (var connection = DBHelper.Connect("CPM"))
+        //    {
+        //        connection.Open();
+        //        lista = connection.Query<Diccionario>("ObtenerTablas", commandType: CommandType.StoredProcedure).ToList();
+        //    }
 
-            return lista;
-        }
+        //    return lista;
+        //}
 
         //public IList<Diccionario> GetTablas()
         //{

@@ -20,15 +20,15 @@ namespace Services.Implementations
             this.diccionarioDatosRepository = diccionarioDatosRepository;
         }
 
-        public IList<Diccionario> GetTablas()
-        {
-            IList<Diccionario> diccionario = diccionarioDatosRepository.GetTablas();
+        //public IList<Diccionario> GetTablas()
+        //{
+        //    IList<Diccionario> diccionario = diccionarioDatosRepository.GetTablas();
 
-            //diccionarioDatosRepository.GetTablas().OrderBy(x => x.Tabla).OrderByDescending(;
+        //    //diccionarioDatosRepository.GetTablas().OrderBy(x => x.Tabla).OrderByDescending(;
 
-            return diccionario;
+        //    return diccionario;
 
 
-        }
+        //}
     }
 }

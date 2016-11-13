@@ -243,7 +243,6 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\WebMatrix.Data.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\WebMatrix.WebData.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Repository.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Org.Mentalis.Security.Cryptography.dll
-D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Dapper.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Mono.Math.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Common.pdb
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\Services.pdb
@@ -288,7 +287,6 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\ru-ru\JavaScriptEngineSwitche
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\ru-ru\JavaScriptEngineSwitcher.V8.resources.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\ru-ru\MsieJavaScriptEngine.resources.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\es\System.Web.Helpers.resources.dll
-D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\es\System.Web.Optimization.resources.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\es\System.Web.Razor.resources.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\es\System.Web.WebPages.resources.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\es\System.Web.WebPages.Deployment.resources.dll
@@ -298,3 +296,5 @@ D:\Desarrollo\GitHub\Herramientas\Herramientas\obj\Debug\Herramientas.csprojReso
 D:\Desarrollo\GitHub\Herramientas\Herramientas\obj\Debug\Herramientas.dll
 D:\Desarrollo\GitHub\Herramientas\Herramientas\obj\Debug\Herramientas.pdb
 D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\es\System.Web.Mvc.resources.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DocumentFormat.OpenXml.dll
+D:\Desarrollo\GitHub\Herramientas\Herramientas\bin\DocumentFormat.OpenXml.xml

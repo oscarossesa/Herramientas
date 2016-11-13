@@ -23,10 +23,10 @@ namespace Herramientas.Controllers
         }
 
         // GET api/apidiccionario
-        public IEnumerable<Diccionario> Get()
-        {
-            return _diccionarioService.GetTablas().ToList();
-        }
+        //public IEnumerable<Diccionario> Get()
+        //{
+        //    return _diccionarioService.GetTablas().ToList();
+        //}
 
         // GET api/apidiccionario/5
         public string Get(int id)
